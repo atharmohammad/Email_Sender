@@ -44,6 +44,8 @@ router.get("/authenticated",async(req,res)=>{ //After authentication the
   //the send message
   //go to utils/OauthFunctions for more details
   const response = await getNewToken(code);
+  //We can also get mail to which we want to send mail
+  // from front-end currently it is harcoded in sendMessage function
 
   //response after message sent successfully
   return res.send("Messsage has been sent!");
